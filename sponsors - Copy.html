@@ -2,7 +2,6 @@
 
 
 <head>
-	<meta charset="utf-8"/>
 	<!-- Fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
 	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'/>
@@ -38,7 +37,24 @@
 	<!-- jQuery -->
 	<script src="../ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
 	
-	
+	<!-- Smooth Scrolling Script -->
+	<script>
+		$(function() {
+			$('a[href*=#]:not([href=#])').click(function() {
+				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+					
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+					if (target.length) {
+						$('html,body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
 	
 	<!-- Pre-load Images -->
 	<img src="images/menu-logo-blue.png" style="display: none;">
@@ -106,21 +122,18 @@
 
 	<div class="oxcontent">
 	
-		<h1>ADVERTISERS</h1>
+		<h1>SPONSORS</h1>
 	
 		
 	
 
-<p>
+<p align="center">
 
-<img width="50%" src="images/advertisers/1.jpg">
+<img width="90%" src ="images/sponsors/1.jpg">
 </p>
 
-<p style="position: relative;padding-left: 20%;"><img width="50%" src="images/advertisers/2.jpg">
 
 	</p>
-
-</p>
 
 
 	
