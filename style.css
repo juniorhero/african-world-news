@@ -728,6 +728,7 @@ padding-top: 50px;
 	background-size: cover;
 	background-position: 50% 0px;
 	overflow: hidden;
+	height: 50%;
 }
 
 #apply-slide h1
